@@ -1,0 +1,12 @@
+.hh{
+    color: rgba(0,0,0,.5);text-decoration: none;
+}
+
+.hh:hover{
+    color: rgba(0,0,0,.7);
+}
+
+.cld{
+    font-size: large;
+}
+

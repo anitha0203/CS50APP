@@ -1,0 +1,37 @@
+<body>
+    <div class="sct2">
+      <form [formGroup]="loginfrm" (ngSubmit)="saveDetails()">
+        <div class="sign1">
+          <p class="sig">Sign In</p>
+        </div>
+
+        <!-- Email input -->
+        <div class="sct3" >
+          <label  for="name" class="form-control-label"><h4>User Name</h4></label>
+          <input type="text"  class="form-control" id="name" formControlName="name" required  name="name" placeholder="Username" [ngClass]="{'is-invalid': isFormSaved && regCard.name.errors }" />
+          <div *ngIf="isFormSaved && regCard.name.errors" class="invalid-feedback">
+            <div *ngIf="regCard.name.errors['required']">Email is required</div>{{messs()}}
+          </div>
+        </div>
+        <!-- Password input -->
+        <div class="sct3" style="margin-top: 1.2vh;">
+          <label for="password" class="form-control-label"><h4>Password</h4></label>
+          <input type="password" class="form-control" id="password" formControlName="password" placeholder="Password" [ngClass]="{'is-invalid': isFormSaved && regCard.password.errors }" >
+          <div *ngIf="isFormSaved && regCard.password.errors" class="invalid-feedback" >
+            
+            <div *ngIf="regCard.password.errors['required']" >Password is required</div>{{messs()}}
+          </div>
+          
+        </div>
+
+        <div class="foot"  style="font-size: large;">
+          <button class="btn btn-primary" style="border-radius: 25px;padding: 0.8vh 3vh;" type="submit">Login</button>
+          <!-- <p style="padding-top:1.5vh;font-size: medium;">Don't have an account?
+            <a routerLink="/register" >Register</a></p> -->
+        </div>
+        <div *ngIf="!isFormSaved || !regCard.password.errors && !regCard.name.errors">
+          <div style="text-align: center;font-size: large;color: red;"> {{message}}</div>
+        </div>
+      </form>
+  </div>
+</body>
