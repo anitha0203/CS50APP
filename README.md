@@ -8,6 +8,11 @@ Portfolio Website
 
 #### Description:
 
+I have build an portfolio website using the knowledge which I have learnt all over the course like Html, CSS, Bootstrap, Javascript & SQL. For building this portfolio website I also learneed the javascript framework.
+
+Now, I go through the website by step-by-step and i will explain about the modules used, type of framework used in it.
+
+Mainly this application depends upon Angular, Html, Bootstrap.
 
 
 
