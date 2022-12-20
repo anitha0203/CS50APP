@@ -5,6 +5,7 @@ import { ContactComponent } from './contact/contact.component';
 import { FooterComponent } from './footer/footer.component';
 import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
+import { RegisterComponent } from './register/register.component';
 import { ServiceComponent } from './service/service.component';
 
 const routes: Routes = [
@@ -14,7 +15,8 @@ const routes: Routes = [
   {path:'service', component: ServiceComponent},
   {path:'login', component: LoginComponent},
   {path:'contact', component: ContactComponent},
-  {path:'footer', component: FooterComponent}
+  {path:'footer', component: FooterComponent},
+  {path:'register', component: RegisterComponent}
   
 ];
 

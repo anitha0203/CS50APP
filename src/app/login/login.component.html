@@ -26,8 +26,8 @@
 
         <div class="foot"  style="font-size: large;">
           <button class="btn btn-primary" style="border-radius: 25px;padding: 0.8vh 3vh;" type="submit">Login</button>
-          <!-- <p style="padding-top:1.5vh;font-size: medium;">Don't have an account?
-            <a routerLink="/register" >Register</a></p> -->
+          <p style="padding-top:1.5vh;font-size: medium;">Don't have an account?
+            <a routerLink="/register" >Register</a></p>
         </div>
         <div *ngIf="!isFormSaved || !regCard.password.errors && !regCard.name.errors">
           <div style="text-align: center;font-size: large;color: red;"> {{message}}</div>

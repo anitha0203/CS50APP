@@ -1,0 +1,59 @@
+<div class="main">
+
+    <div class="container">
+
+       <form [formGroup]="loginfrm" (ngSubmit)="saveCardDetails()">
+  
+        <h2>Enter Your Details</h2>  <br>
+        <div class="row">
+          <div class="col">
+              <label for="Username" class="form-label">Username<span style="color: red;"> *</span></label>
+              <input type="text" class="form-control" id="Username" formControlName="Username" required placeholder="Enter Username" name="Username" [ngClass]="{'is-invalid': isFormSaved && regCard['Username'].errors }" />
+          </div>
+        </div>
+
+         <!--  Email   -->
+          <div class="row">
+            <div class="col">
+                <label for="Email" class="form-label">Email<span style="color: red;"> *</span></label>
+                <input type="Email"  class="form-control" id="Email" formControlName="Email" required name="Email" [ngClass]="{'is-invalid': isFormSaved && regCard['Email'].errors }" />
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col">
+              <label for="Qualification" class="form-label">Qualification<span style="color: red;"> *</span></label>
+              <input type="text" class="form-control" id="Qualification" formControlName="Qualification" required name="Qualification" [ngClass]="{ 'is-invalid': isFormSaved && regCard['Qualification'].errors }" />
+             </div>
+          </div>
+  
+          <!--  Password   -->
+        <div class="row">
+          <div class="col">
+              <label for="Password" class="form-label">Password<span style="color: red;"> *</span></label>
+              <input type="password" class="form-control" id="Password" formControlName="Password" name="Password" 
+              [ngClass]="{'is-invalid': isFormSaved && regCard['Password'].errors }" >
+          </div>
+        </div>
+
+        <div class="row">
+           <!-- Comform Password  -->
+          <div class="col">
+              <label for="cpassword" class="form-label">Confirm Password<span style="color: red;"> *</span></label>
+              <input type="password" id="cpassword"  class="form-control" formControlName="cpassword" [ngClass]="{'is-invalid': isFormSaved && regCard['Password'].errors && confirmPasswordClass}">
+          </div>
+          <div *ngIf='!passwordsMatching && loginfrm.controls["cpassword"].dirty ' style="color: red;">
+              Passwords did not match
+          </div>
+        </div>
+
+  
+  
+            <div class="foot" style="padding-top: 10px;">
+              <button type="submit" class="btn btn-primary" style="border-radius: 25px;padding: 0.8vh 3vh;">Submit</button>
+            </div>
+        </form>
+    </div>
+  
+</div>
+  

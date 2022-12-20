@@ -12,6 +12,7 @@ import { HeaderComponent } from './header/header.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { FooterComponent } from './footer/footer.component';
+import { RegisterComponent } from './register/register.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { FooterComponent } from './footer/footer.component';
     AboutComponent,
     LoginComponent,
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
+    RegisterComponent
   ],
   imports: [
     BrowserModule,
