@@ -29,7 +29,7 @@ export class RegisterComponent {
 
   ngOnInit(): void {
     this.loginfrm = this.formBuilder.group({
-      Username: new FormControl(' ', [Validators.required, Validators.pattern(this.userNamePattern)]),
+      Username: new FormControl('', [Validators.required, Validators.pattern(this.userNamePattern)]),
       Password: new FormControl('',[Validators.required,Validators.minLength(6)]),
       cpassword: new FormControl('',[Validators.required]),
       Qualification: new FormControl('', [Validators.required]),

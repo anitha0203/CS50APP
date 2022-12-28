@@ -1,3 +1,7 @@
 i{
     margin: 0px 2vh;
 }
+
+*{
+    --bs-body-font-family: var(--bs-font-sans-serif);
+}

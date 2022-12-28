@@ -1,3 +1,6 @@
 p{
     color: #a5a5a5;
 }
+*{
+    --bs-body-font-family: var(--bs-font-sans-serif);
+}

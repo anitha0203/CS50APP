@@ -41,3 +41,7 @@ form{
     font-size: medium;
   }
 
+
+  *{
+    --bs-body-font-family: var(--bs-font-sans-serif);
+}

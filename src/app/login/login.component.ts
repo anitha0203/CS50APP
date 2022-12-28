@@ -45,10 +45,8 @@ export class LoginComponent implements OnInit {
     this.utilservice.login()
     .pipe(first())
       .subscribe({ next:(users)   => {
-        //this.loginfrm.value.name, this.loginfrm.value.password
         this.d=users
         for(var i=0;i<this.d.length;i++){
-          console.log(this.loginfrm.value.name)
           if(this.d[i].username == this.loginfrm.value.name && this.d[i].password == this.loginfrm.value.password )
           {
             this.val = true;
@@ -57,7 +55,6 @@ export class LoginComponent implements OnInit {
           }
         }
         localStorage.setItem('user',JSON.stringify(users))
-         console.log("this is login ",this.d[0].username)
          if(!this.val){
           this.message='Wrong Credentials'
          }
@@ -67,10 +64,6 @@ export class LoginComponent implements OnInit {
          this.message='Wrong Credentials'
       }
     })
-
-
-    
-
   }
 
   messs(){
